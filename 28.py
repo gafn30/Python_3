@@ -1,10 +1,10 @@
-def summa(a, b):
-    a += 1
-    b -= 1
-    if b > 0:
-        return summa(a, b)
-    else:
+def sum(a, b):
+    if b == 0:
         return a
- 
- 
-print summa(3, 5)
+    else:
+        if b > 0:
+            return sum(a + 1, b - 1)
+        else:
+            return sum(a - 1, b + 1)
+
+print(sum(int(input()), int(input())))
